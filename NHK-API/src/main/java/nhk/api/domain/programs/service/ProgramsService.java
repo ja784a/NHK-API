@@ -1,6 +1,10 @@
 package nhk.api.domain.programs.service;
 
+import java.util.List;
+
+import nhk.api.domain.programs.model.Program;
+
 public interface ProgramsService {
 	
-	public String fetchPrograms(int area, String service, String date, String apikey);
+	public List<Program> fetchPrograms(int area, String service, String date, String apikey);
 }
