@@ -3,9 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.1/css/bootstrap.min.css}">
+<script th:src="@{/webjars/popper.js/2.9.3/umd/popper.min.js}" defer></script>
+<script th:src="@{/webjars/bootstrap/5.3.1/js/bootstrap.min.js}" defer></script>
 </head>
 <body>
-	<p th:each="p:${programs}" th:text="${p.title}"></p>
+	<div class="d-flex justify-content-center align-items-center" style="background-color: dodgerblue; width: 100%; height: 60px;">
+		<h2 th:text="#{logo}" class="text-light"></h2>
+	</div>
+	<div class="row justify-content-center">
+		<div class="col-3">
+			<h5 th:text="${serviceDB.serviceName}"></h5>
+		</div>
+		<div class="col-2">
+			<h5 th:text="${areaDB.areaName}"></h5>
+		</div>
+		<div class="col-3">
+			<h5 th:text="${#temporals.format(date, 'yyyy年MM月dd日(E)')}"></h5>
+		</div>
+	</div>
+	<ul class="list-group" th:each="p:${programs}">
+		<li class="list-group-item">
+			<div class="row">
+				<div class="col-2">
+					<p th:text="${#dates.format(p.start_time, 'HH時mm分')}"></p>
+				</div>
+				<div class="col-8">
+					<p th:text="${p.title}"></p>
+				</div>
+			</div>
+		</li>
+	</ul>
 
 </body>
 </html>

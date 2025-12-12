@@ -18,4 +18,9 @@ public class AreasDBServiceImpl implements AreasDBService {
 	public List<AreasDB> getAreas() {
 		return mapper.selectAreas();
 	}
+	
+	@Override
+	public AreasDB getArea(String areaId) {
+		return mapper.selectArea(areaId);
+	}
 }

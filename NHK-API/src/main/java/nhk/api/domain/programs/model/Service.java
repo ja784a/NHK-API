@@ -6,7 +6,7 @@ import lombok.Data;
 public class Service {
 	private String id;
 	private String name;
-	private LogoS logoS;
-	private LogoM logoM;
-	private LogoL logoL;
+	private LogoS logo_s;
+	private LogoM logo_m;
+	private LogoL logo_l;
 }

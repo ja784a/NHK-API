@@ -1,5 +1,7 @@
 package nhk.api.client.impl;
 
+import java.time.LocalDate;
+
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 
@@ -13,7 +15,7 @@ public class ExternalApiClientImpl implements ExternalApiClient {
 		this.webClient = webClient;
 	}
 	
-	public String getProgramList(int area, String service, String date, String apikey) {
+	public String getProgramList(String area, String service, LocalDate date, String apikey) {
 		return webClient.get()
                 .uri(uriBuilder -> uriBuilder
                         .path("/v2/pg/list/{area}/{service}/{date}.json")

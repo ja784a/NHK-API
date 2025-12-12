@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http;//www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title th:text="#{top}"></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.1/css/bootstrap.min.css}">
+<script th:src="@{/webjars/popper.js/2.9.3/umd/popper.min.js}" defer></script>
+<script th:src="@{/webjars/bootstrap/5.3.1/js/bootstrap.min.js}" defer></script>
+</head>
+<body>
+	<div class="container-fluid p-0 m-0">
+		<div class="d-flex justify-content-center align-items-center" style="background-color: dodgerblue; width: 100%; height: 60px;">
+			<h2 th:text="#{logo}" class="text-light"></h2>
+		</div>
+		<form th:action="@{call-program-list}" method="post" th:object="${topPageForm}">
+			<h5 th:text="#{service-select}" class="text-center mt-4"></h5>
+			<div class="d-flex justify-content-center">
+				<select th:field="*{serviceId}" class="form-select bg-secondary text-light" style="width: 200px;">
+					<option th:each="s:${services}" th:text="${s.serviceName}" th:value="${s.serviceId}"></option>
+				</select>
+			</div>
+			<h5 th:text="#{area-select}" class="text-center mt-4"></h5>
+			<div class="d-flex justify-content-center">
+				<select th:field="*{areaId}" class="form-select bg-secondary text-light" style="width: 200px;">
+					<option th:each="a:${areas}" th:text="${a.areaName}" th:value="${a.areaId}"></option>
+				</select>
+			</div>
+			<h5 th:text="#{date-select}" class="text-center mt-4"></h5>
+			<div class="d-flex justify-content-center">
+				<select th:field="*{date}" class="form-select bg-secondary text-light" style="width: 200px;">
+					<option th:each="d:${dates}" th:text="${#temporals.format(d.selectableDate, 'yyyy年MM月dd日(E)')}" th:value="${d.selectableDate}"></option>
+				</select>
+			</div>
+			<div class="text-center mt-4">
+				<input type="submit" class="btn btn-primary rounded-pill text-center" th:value="#{load-list}">
+			</div>
+		</form>
+	</div>
+
+</body>
+</html>

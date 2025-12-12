@@ -9,8 +9,8 @@ import lombok.Data;
 public class Program {
 	private Long id;
 	private Integer eventId;
-	private Date startTime;
-	private Date endTime;
+	private Date start_time;
+	private Date end_Time;
 	private Area area;
 	private Service service;
 	private String title;

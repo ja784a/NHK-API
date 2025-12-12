@@ -5,4 +5,9 @@
 	<select id="selectAreas" resultType="AreasDB">
 		select * from areas 
 	</select>
+	
+	<select id="selectArea" resultType="AreasDB">
+		select * from areas 
+		where area_id = #{areaId}
+	</select>
 </mapper>
