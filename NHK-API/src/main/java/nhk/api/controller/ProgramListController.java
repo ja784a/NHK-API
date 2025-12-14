@@ -45,6 +45,10 @@ public class ProgramListController {
 		model.addAttribute("areaDB", areaDB);
 		model.addAttribute("date", date);
 		
+		if (programs == null) {
+			return "error";
+		}
+		
 		return "program-list";
 		
 	}

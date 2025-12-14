@@ -23,6 +23,10 @@ public class DetailsController {
 		
 		model.addAttribute("desc", desc);
 		
+		if (desc == null) {
+			return "error";
+		}
+		
 		return "program-details";
 	}
 }

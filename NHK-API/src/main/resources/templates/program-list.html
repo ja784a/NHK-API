@@ -12,18 +12,20 @@
 	<div class="d-flex justify-content-center align-items-center" style="background-color: dodgerblue; width: 100%; height: 60px;">
 		<h2 th:text="#{logo}" class="text-light"></h2>
 	</div>
-	<div class="row justify-content-center">
-		<div class="col-sm-2">
-			<h5 th:text="${serviceDB.serviceName}"></h5>
-		</div>
-		<div class="col-sm-2">
-			<h5 th:text="${areaDB.areaName}"></h5>
-		</div>
-		<div class="col-sm-3">
-			<h5 th:text="${#temporals.format(date, 'yyyy年MM月dd日(E)')}"></h5>
-		</div>
-		<div class="col-sm-1">
-			<a th:href="@{/}" th:text="#{back}"></a>
+	<div class="container" style="width: 98%;">
+		<div class="row justify-content-center">
+			<div class="col-sm-2">
+				<h5 th:text="${serviceDB.serviceName}"></h5>
+			</div>
+			<div class="col-sm-2">
+				<h5 th:text="${areaDB.areaName}"></h5>
+			</div>
+			<div class="col-sm-3">
+				<h5 th:text="${#temporals.format(date, 'yyyy年MM月dd日(E)')}"></h5>
+			</div>
+			<div class="col-sm-1">
+				<a th:href="@{/}" th:text="#{back}"></a>
+			</div>
 		</div>
 	</div>
 	<ul class="list-group" th:each="p:${programs}">
