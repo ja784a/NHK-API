@@ -25,4 +25,15 @@ public class ExternalApiClientImpl implements ExternalApiClient {
                 .bodyToMono(String.class)
                 .block();
 	}
+	
+	public String getDetails(String area, String service, String id, String apikey) {
+		return webClient.get()
+                .uri(uriBuilder -> uriBuilder
+                        .path("/v2/pg/info/{area}/{service}/{id}.json")
+                        .queryParam("key", apikey)
+                        .build(area, service, id))
+                .retrieve()
+                .bodyToMono(String.class)
+                .block();
+	}
 }

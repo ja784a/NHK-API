@@ -9,4 +9,6 @@ import nhk.api.domain.programs.model.DatesDB;
 @Mapper
 public interface DatesDBMapper {
 	public List<DatesDB> selectDates();
+	
+	public void updateDates();
 }

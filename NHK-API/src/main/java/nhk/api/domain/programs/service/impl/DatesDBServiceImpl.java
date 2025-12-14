@@ -18,4 +18,8 @@ public class DatesDBServiceImpl implements DatesDBService {
 	public List<DatesDB> getDates() {
 		return mapper.selectDates();
 	}
+	
+	public void updateDates() {
+		mapper.updateDates();
+	}
 }

@@ -29,6 +29,8 @@ public class TopPageController {
 	
 	@GetMapping("/")
 	public String getTopPage(@ModelAttribute TopPageForm form, Model model) {
+		datesDBService.updateDates();
+		
 		List<ServicesDB> services = servicesDBService.getServices();
 		
 		List<AreasDB> areas = areasDBService.getAreas();

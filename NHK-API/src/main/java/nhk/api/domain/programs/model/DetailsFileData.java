@@ -6,6 +6,6 @@ import java.util.Map;
 import lombok.Data;
 
 @Data
-public class JsonFileData {
-	private Map<String, List<Program>> list;
+public class DetailsFileData {
+	private Map<String, List<Description>> list;
 }

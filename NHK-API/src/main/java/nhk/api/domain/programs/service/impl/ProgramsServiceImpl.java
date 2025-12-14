@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import nhk.api.client.ExternalApiClient;
-import nhk.api.domain.programs.model.JsonFileData;
+import nhk.api.domain.programs.model.ProgramListFileData;
 import nhk.api.domain.programs.model.Program;
 import nhk.api.domain.programs.service.ProgramsService;
 import tools.jackson.databind.ObjectMapper;
@@ -22,7 +22,7 @@ public class ProgramsServiceImpl implements ProgramsService {
 		
 		ObjectMapper mapper = new ObjectMapper();
 		
-		JsonFileData data = mapper.readValue(programList, JsonFileData.class);
+		ProgramListFileData data = mapper.readValue(programList, ProgramListFileData.class);
 		List<Program> programs = data.getList().get(service);
 		
 		return programs;

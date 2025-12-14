@@ -1,21 +1,24 @@
 package nhk.api.domain.programs.model;
 
 import java.util.Date;
-import java.util.List;
 
 import lombok.Data;
 
 @Data
-public class Program {
+public class Description {
 	private String id;
-	private String eventId;
+	private String event_id;
 	private Date start_time;
-	private Date end_Time;
+	private Date end_time;
 	private Area area;
 	private Service service;
 	private String title;
 	private String subtitle;
 	private String content;
 	private String act;
-	private List<Integer> genres;
+	private String[] genres;
+	private Logo program_logo;
+	private String program_url;
+	private String episode_url;
+	private String[] hashtags;
 }

@@ -6,4 +6,6 @@ import nhk.api.domain.programs.model.DatesDB;
 
 public interface DatesDBService {
 	public List<DatesDB> getDates();
+	
+	public void updateDates();
 }
