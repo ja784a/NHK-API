@@ -12,7 +12,7 @@ public class GlobalControlAdvice {
 	public String exceptionHandler(Exception e, Model model) {
 		e.printStackTrace();
 		
-		return "error/404";
+		return "error";
 	}
 	
 }

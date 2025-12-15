@@ -17,10 +17,11 @@
 			<h1 th:text="${d.title}"></h1>
 			<h5 th:text="${d.subtitle}"></h5>
 			<p th:text="${#dates.format(d.start_time, 'YYYY年MM月dd日 HH時mm分')} + '~' + ${#dates.format(d.end_time, 'HH時mm分')}"></p>
+			<img th:if="${d.program_logo != null}" th:src="'https:' + ${d.program_logo.url}" style="width: auto; height: 150px;">
 			<p th:text="${d.content}"></p>
 			<p th:text="${d.act}"></p>
 		</div>
-		<a href="javascript:history.back()" th:text="#{back}"></a>
+		<a href="javascript:history.back()" th:text="#{back}" class="btn btn-secondary rounded-pill"></a>
 	</div>
 
 </body>

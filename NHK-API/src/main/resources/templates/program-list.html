@@ -14,7 +14,7 @@
 	</div>
 	<div class="container" style="width: 98%;">
 		<div class="row justify-content-center">
-			<div class="col-sm-2">
+			<div class="col-sm-3">
 				<h5 th:text="${serviceDB.serviceName}"></h5>
 			</div>
 			<div class="col-sm-2">
@@ -23,8 +23,8 @@
 			<div class="col-sm-3">
 				<h5 th:text="${#temporals.format(date, 'yyyy年MM月dd日(E)')}"></h5>
 			</div>
-			<div class="col-sm-1">
-				<a th:href="@{/}" th:text="#{back}"></a>
+			<div class="col-sm-2">
+				<a th:href="@{/}" th:text="#{back}" class="btn btn-secondary rounded-pill"></a>
 			</div>
 		</div>
 	</div>
@@ -38,7 +38,7 @@
 					<p th:text="${p.title}"></p>
 				</div>
 				<div class="col-sm-2">
-					<a th:href="@{/program-details/{area}/{service}/{id}(area=${areaDB.areaId},service=${serviceDB.serviceId},id=${p.id})}" th:text="#{details}"></a>
+					<a th:href="@{/program-details/{area}/{service}/{id}(area=${areaDB.areaId},service=${serviceDB.serviceId},id=${p.id})}" th:text="#{details}" class="btn btn-primary rounded-pill"></a>
 				</div>
 			</div>
 		</li>
