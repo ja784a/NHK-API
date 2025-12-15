@@ -7,3 +7,7 @@ NNHKのWeb Apiから番組情報を取得し、実際の番組表を表示する
 フレームワーク・・・Spring Boot <br.
 バックエンド・・・Java、My SQL My Batis<br> 
 フロントエンド・・HTML、Bootstrap <br>
+# 本アプリケーションを実行するにあたって
+実行の前に必ず以下のSQLファイルからマスターデータを追加してください。<br>
+・schema.sql・・・src/main/resources/schema.sql<br>
+・data.sql・・・src/main/resources/data.sql<br>
