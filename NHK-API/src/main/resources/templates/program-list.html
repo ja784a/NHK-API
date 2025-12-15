@@ -38,7 +38,7 @@
 					<p th:text="${p.title}"></p>
 				</div>
 				<div class="col-sm-2">
-					<a th:href="@{/program-details/{area}/{service}/{id}(area=${areaDB.areaId},service=${serviceDB.serviceId},id=${p.id})}" th:text="#{details}" class="btn btn-primary rounded-pill"></a>
+					<a th:href="@{/program-details/{area}/{service}/{id}(area=${areaDB.areaId},service=${serviceDB.serviceId},id=${p.id})}" th:text="#{details-btn}" class="btn btn-primary rounded-pill"></a>
 				</div>
 			</div>
 		</li>
