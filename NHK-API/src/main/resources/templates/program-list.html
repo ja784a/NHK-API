@@ -29,7 +29,7 @@
 		</div>
 	</div>
 	<ul class="list-group" th:each="p:${programs}">
-		<li class="list-group-item">
+		<li class="list-group-item" th:classappend="${p.start_time le now} and ${p.end_time ge now} ? 'bg-danger-subtle'">
 			<div class="row">
 				<div class="col-sm-2">
 					<p th:text="${#dates.format(p.start_time, 'HH時mm分')}"></p>

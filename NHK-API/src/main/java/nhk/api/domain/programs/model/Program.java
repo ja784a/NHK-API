@@ -10,7 +10,7 @@ public class Program {
 	private String id;
 	private String eventId;
 	private Date start_time;
-	private Date end_Time;
+	private Date end_time;
 	private Area area;
 	private Service service;
 	private String title;

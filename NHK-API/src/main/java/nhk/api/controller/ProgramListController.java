@@ -1,6 +1,7 @@
 package nhk.api.controller;
 
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,10 +41,13 @@ public class ProgramListController {
 		ServicesDB serviceDB = servicesDBService.getService(service);
 		AreasDB areaDB = areasDBService.getArea(area);
 		
+		Date now = new Date();
+		
 		model.addAttribute("programs", programs);
 		model.addAttribute("serviceDB", serviceDB);
 		model.addAttribute("areaDB", areaDB);
 		model.addAttribute("date", date);
+		model.addAttribute("now", now);
 		
 		if (programs == null) {
 			return "error";
