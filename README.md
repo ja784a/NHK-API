@@ -1,7 +1,7 @@
 # NHK番組表アプリ
 NNHKのWeb Apiから番組情報を取得し、実際の番組表を表示するアプリケーションです。
 # デモ動画
-https://github.com/user-attachments/assets/324864d3-016e-4358-8dc1-a0d53e88c816
+https://github.com/user-attachments/assets/b5a2806f-af39-45ee-9f81-3ccee018f261
 # 機能一覧
 ・番組表表示
 ・番組詳細表示
